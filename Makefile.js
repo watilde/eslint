@@ -57,7 +57,7 @@ var NODE = "node ", // intentional extra space
     JS_FILES = find("lib/").filter(fileType("js")).join(" "),
     JSON_FILES = find("conf/").filter(fileType("json")).join(" ") + " .eslintrc",
     MARKDOWN_FILES_ARRAY = find("docs/").concat(ls(".")).filter(fileType("md")),
-    TEST_FILES = find("tests/lib/").filter(fileType("js")).join(" ");
+    TEST_FILES = find("tests/lib/").concat(find("tests/bin/")).filter(fileType("js")).join(" ");
     /*eslint-enable no-use-before-define */
 
 //------------------------------------------------------------------------------
